@@ -35,7 +35,7 @@ function download(data, filename, type) {
     }
 }
 
-download(JSON.stringify(Array.from(document.querySelectorAll('[data-test-qa=weight-list-item]').values(), item =>
+download(JSON.stringify(Array.from(document.querySelectorAll('[data-test-qa=weight-list-item]'), item =>
 	({
 	    date: item.querySelector('[data-test-qa="item-date-time"]').innerText,
 	    fat: item.querySelector('.body-fat-text').innerText,
@@ -50,4 +50,5 @@ and press `Enter`.
 - to process first three dates which are in format Today, Mon, Tue etc. Not done yet https://stackoverflow.com/questions/13274166/how-do-i-pop-off-the-first-array-element-with-jquery/13274196#13274196
 - to convert array iterator to array https://stackoverflow.com/questions/43885365/using-map-on-an-iterator/43885505#43885505
 - to get array iterator on values use `.values()` https://developer.mozilla.org/en-US/docs/Web/API/NodeList#Example
+- no need to use `.values()` because `NodeList` is iterable `x = document.querySelectorAll('body'); x[Symbol.iterator] === x.values` - thanks to https://github.com/P0lip
 - example that you can run `querySelector` on nodeList items https://stackoverflow.com/questions/6791112/how-to-filter-elements-returned-by-queryselectorall/6791385#6791385
