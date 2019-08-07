@@ -52,3 +52,8 @@ and press `Enter`.
 - to get array iterator on values use `.values()` https://developer.mozilla.org/en-US/docs/Web/API/NodeList#Example
 - no need to use `.values()` because `NodeList` is iterable `x = document.querySelectorAll('body'); x[Symbol.iterator] === x.values` - thanks to https://github.com/P0lip
 - example that you can run `querySelector` on nodeList items https://stackoverflow.com/questions/6791112/how-to-filter-elements-returned-by-queryselectorall/6791385#6791385
+
+## TODO
+
+- Create a writable stream directly to the file system with sth like https://github.com/jimmywarting/StreamSaver.js
+- Use HTTPS
